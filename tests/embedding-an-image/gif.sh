@@ -1,3 +1,5 @@
 #!/bin/bash
 
-. ../../utils/imgcat.sh "../../fixtures/omg.gif"
+BASEDIR=$(dirname $0)
+
+. $BASEDIR/../../utils/imgcat.sh "$BASEDIR/../../fixtures/omg.gif"
