@@ -1,2 +1,5 @@
-# agent-test-cases
-A bunch of scripts to test various aspects of the Buildkite Agent
+# Buildkite Agent Test Cases
+
+![lol](http://d2loo43ei2qiky.cloudfront.net/FINAL/GOTY/oprah-bees.gif)
+
+![what](http://www.reactiongifs.com/r/quizzical.gif)
