@@ -1,6 +1,6 @@
-# Buildkite Agent Test Cases
+# Buildkite Agent Tests
 
-## Test Cases
+## Tests
 
 TODO
 
