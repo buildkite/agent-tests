@@ -1,4 +1,7 @@
 #!/bin/bash
-set -u
 
-buildkite-run "BUILDKITE_BUILD_CHECKOUT_PATH=$AGENT_TEST"
+if [[ "$AGENT_TEST" == "" ]]; then
+  buildkite-error "\$AGENT_TEST has not been set"
+fi
+
+buildkite-run "BUILDKITE_BUILD_CHECKOUT_PATH=tests/$AGENT_TEST"
