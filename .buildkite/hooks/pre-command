@@ -1,5 +1,4 @@
 #!/bin/bash
 set -u
 
-echo "--- Switching to tests/$AGENT_TEST"
-cd tests/$AGENT_TEST
+buildkite-run "BUILDKITE_BUILD_CHECKOUT_PATH=$AGENT_TEST"
