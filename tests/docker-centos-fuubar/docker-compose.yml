@@ -1,4 +1,4 @@
-test:
+app:
   image: tcnksm/centos-ruby
   volumes:
     - ./:/app
