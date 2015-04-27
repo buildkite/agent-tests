@@ -1,0 +1,5 @@
+#!/bin/bash
+set -u
+
+echo "--- Switching to tests/$AGENT_TEST"
+cd tests/$AGENT_TEST
