@@ -1,6 +1,10 @@
 #!/bin/bash
 set -e
 
+echo "--- Moving to the test directory"
+BASEDIR=$(dirname $0)
+cd $BASEDIR
+
 echo "--- :bundler: Bundling"
 bundle install
 
