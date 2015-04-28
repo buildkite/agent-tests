@@ -2,3 +2,4 @@ app:
   image: tcnksm/centos-ruby
   volumes:
     - ./:/app
+  workdir: /app
