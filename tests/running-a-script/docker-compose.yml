@@ -1,0 +1,5 @@
+app:
+  image: ubuntu:latest
+  volumes:
+    - ./:/app
+  working_dir: /app
