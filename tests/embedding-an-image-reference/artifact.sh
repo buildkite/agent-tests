@@ -2,4 +2,8 @@
 
 BASEDIR=$(dirname $0)
 
-. $BASEDIR/../../utils/imgref.sh "artifact://fixtures/meme.png" "Meme!"
+cp $BASEDIR/../../fixtures/meme.png .
+cp $BASEDIR/../../fixtures/omg.gif .
+
+. $BASEDIR/../../utils/imgref.sh "artifact://meme.png" "Meme!"
+. $BASEDIR/../../utils/imgref.sh "artifact://omg.gif" "OMG!"
