@@ -12,6 +12,8 @@ RSpec.describe "terminal homepage", type: :feature do
   end
 
   it "says that there is a spoon" do
-    expect(page).to have_content("there is a spoon")
+    within(".example.curl") do
+      expect(page).to have_content("there is a spoon")
+    end
   end
 end
