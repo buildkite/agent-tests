@@ -1,19 +1,17 @@
 require 'spec_helper'
 
-RSpec.describe "terminal homepage", type: :feature do
+RSpec.describe "Terminal inline images docs", type: :feature do
   before do
     Capybara.app_host = 'http://buildkite.github.io/'
 
-    visit "/terminal"
+    visit "/terminal/inline-images/"
   end
 
-  it "includes the usage of terminal" do
-    expect(page).to have_content("cat input.raw | terminal-to-html > out.html")
+  it "includes an example print_image_ref bash function" do
+    expect(page).to have_content("print_image_ref")
   end
 
   it "says that there is a spoon" do
-    within(".example.curl") do
-      expect(page).to have_content("there is a spoon")
-    end
+    expect(page).to have_content("there is a spoon")
   end
 end
