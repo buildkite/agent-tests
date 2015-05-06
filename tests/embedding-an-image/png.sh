@@ -2,4 +2,4 @@
 
 BASEDIR=$(dirname $0)
 
-. $BASEDIR/../../utils/imgcat.sh "$BASEDIR/../../fixtures/meme.png"
+. $BASEDIR/utils/imgcat.sh "$BASEDIR/fixtures/meme.png"
