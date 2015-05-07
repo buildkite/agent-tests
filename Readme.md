@@ -26,8 +26,8 @@ There is a local [post-checkout agent hook](.buildkite/hooks/post-checkout) whic
 
 ## Usage
 
-1. Create a new project based on [.buildkite/steps.json](.buildkite/steps.json):
-<br>
+Create a new project based on [.buildkite/steps.json](.buildkite/steps.json):
+
 ```bash
 $ export BUILDKITE_ACCESS_TOKEN=xxx
 $ export BUILDKITE_ORG=my-org
@@ -43,12 +43,14 @@ $ curl "https://api.buildkite.com/v1/organizations/$BUILDKITE_ORG/projects" \
   }
 JSON
 ```
-2. Start an agent (on a host with Docker support) with meta-data `agent-test`:
-<br>
+
+Start an agent (on a host with Docker support) with meta-data `agent-test`:
+
 ```bash
 $ buildkite-agent start --token xxx --meta-data agent-test
 ```
-3. Trigger a build.
+
+and then trigger a build.
 
 ## Copyright
 
