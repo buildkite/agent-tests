@@ -20,6 +20,12 @@
 * [embedding-an-image-capybara-screenshot](https://github.com/buildkite/agent-tests/tree/master/tests/embedding-an-image-capybara-screenshot)
 <br>Tests images embedded using a Capybara screenshot helper
 
+## Using
+
+Create a build step for each of the test scripts, setting the `AGENT_TEST` environment variable to be the directory name of the test.
+
+There is a [post-checkout hook](https://github.com/buildkite/agent-tests/blob/master/.buildkite/hooks/post-checkout) which changes directory into the correct test using the `AGENT_TEST` environment variable.
+
 ## Copyright
 
 Copyright (c) 2015 Buildkite Pty Ltd. See LICENSE for details.
