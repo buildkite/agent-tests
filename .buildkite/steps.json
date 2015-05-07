@@ -1,0 +1,86 @@
+[
+  {
+    "type": "script",
+    "name": "Executing a command",
+    "command": "cat file.txt",
+    "env": { "AGENT_TEST": "executing-a-command" },
+    "agent_query_rules": ["agent-test=true"]
+  },
+  {
+    "type": "script",
+    "name": "Simple script",
+    "command": "script.sh",
+    "env": { "AGENT_TEST": "running-a-script" },
+    "agent_query_rules": ["agent-test=true"]
+  },
+  {
+    "type": "script",
+    "name": "Script without u+x",
+    "command": "this-script-doesn-have-chmod-x.sh",
+    "env": { "AGENT_TEST": "running-a-script" },
+    "agent_query_rules": ["agent-test=true"]
+  },
+  {
+    "type": "script",
+    "name": "Script in a subdir with spaces",
+    "command": "running-a-script/and this is a script.sh",
+    "env": { "AGENT_TEST": "running-a-script" },
+    "agent_query_rules": ["agent-test=true"]
+  },
+  {
+    "type": "script",
+    "name": "Script run via Docker Compose",
+    "command": "script.sh",
+    "env": {
+      "AGENT_TEST": "running-a-script",
+      "BUILDKITE_DOCKER_COMPOSE_CONTAINER": "app"
+    },
+    "agent_query_rules": ["agent-test=true"]
+  },
+  {
+    "type": "script",
+    "name": "Embedded gif image",
+    "command": "gif.sh",
+    "env": { "AGENT_TEST": "embedding-an-image" },
+    "agent_query_rules": ["agent-test=true"]
+  },
+  {
+    "type": "script",
+    "name": "Embedded png image",
+    "command": "png.sh",
+    "env": { "AGENT_TEST": "embedding-an-image" },
+    "agent_query_rules": ["agent-test=true"]
+  },
+  {
+    "type": "script",
+    "name": "Referencing an artifact image",
+    "command": "artifact.sh",
+    "artifact_paths": "*.gif;*.png",
+    "env": { "AGENT_TEST": "embedding-an-image-reference" },
+    "agent_query_rules": ["agent-test=true"]
+  },
+  {
+    "type": "script",
+    "name": "Referencing an external http image",
+    "command": "external_http_image.sh",
+    "env": { "AGENT_TEST": "embedding-an-image-reference" },
+    "agent_query_rules": ["agent-test=true"]
+  },
+  {
+    "type": "script",
+    "name": "Referencing an external https image",
+    "command": "external_https_image.sh",
+    "env": { "AGENT_TEST": "embedding-an-image-reference" },
+    "agent_query_rules": ["agent-test=true"]
+  },
+  {
+    "type": "script",
+    "name": "CentOS with progress bar output",
+    "command": "ci.sh",
+    "env": {
+      "AGENT_TEST": "docker-centos-fuubar",
+      "BUILDKITE_DOCKER_COMPOSE_CONTAINER": "app"
+    },
+    "agent_query_rules": ["agent-test=true"]
+  }
+]
