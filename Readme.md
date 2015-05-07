@@ -33,6 +33,7 @@ $ curl "https://api.buildkite.com/v1/organizations/$BUILDKITE_ORG/projects" \
   -i \
   -X POST \
   -H "Authorization: Bearer $BUILDKITE_ACCESS_TOKEN" \
+  -H "Content-type: text/json" \
   -d@- <<JSON
   {
     "name": "Agent Tests",
