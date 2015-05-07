@@ -8,6 +8,8 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    capybara-inline-screenshot (1.0.0)
+      capybara-screenshot
     capybara-screenshot (1.0.9)
       capybara (>= 1.0, < 3)
       launchy
@@ -53,6 +55,7 @@ PLATFORMS
 
 DEPENDENCIES
   capybara
+  capybara-inline-screenshot
   capybara-screenshot
   poltergeist
   rake
