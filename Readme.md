@@ -1,5 +1,7 @@
 # Buildkite Agent Tests
 
+Runs various sanity checks against the Buildkite Agent. There is a local [post-checkout agent hook](.buildkite/hooks/post-checkout) which changes directory into the correct test using the `AGENT_TEST` environment variable.
+
 ## Tests
 
 * [executing-a-command](tests/executing-a-command)
@@ -19,10 +21,6 @@
 
 * [embedding-an-image-capybara-screenshot](tests/embedding-an-image-capybara-screenshot)
 <br>Tests images embedded using a Capybara screenshot helper
-
-## Setting AGENT_TEST
-
-There is a local [post-checkout agent hook](.buildkite/hooks/post-checkout) which changes directory into the correct test using the `AGENT_TEST` environment variable
 
 ## Usage
 
