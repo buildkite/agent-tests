@@ -61,6 +61,14 @@
   },
   {
     "type": "script",
+    "name": "Referencing an artifact image with Capybara",
+    "command": "bundle && bundle exec rspec",
+    "artifact_paths": "tmp/**/*.png",
+    "env": { "AGENT_TEST": "embedding-an-image-capybara-screenshot" },
+    "agent_query_rules": ["agent-test=true"]
+  },
+  {
+    "type": "script",
     "name": "Referencing an external http image",
     "command": "external_http_image.sh",
     "env": { "AGENT_TEST": "embedding-an-image-reference" },
