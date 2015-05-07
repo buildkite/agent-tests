@@ -24,7 +24,7 @@
 
 Create a build step for each of the test scripts, setting the `AGENT_TEST` environment variable to be the directory name of the test.
 
-There is a [post-checkout hook](https://github.com/buildkite/agent-tests/blob/master/.buildkite/hooks/post-checkout) which changes directory into the correct test using the `AGENT_TEST` environment variable.
+There is a local [post-checkout agent hook](https://github.com/buildkite/agent-tests/blob/master/.buildkite/hooks/post-checkout) which changes directory into the correct test using the `AGENT_TEST` environment variable.
 
 ## Copyright
 
