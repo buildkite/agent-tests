@@ -62,7 +62,7 @@
   {
     "type": "script",
     "name": "Referencing an artifact image with Capybara",
-    "command": "bundle && bundle exec rspec",
+    "command": "test.sh",
     "artifact_paths": "tmp/**/*.png",
     "env": { "AGENT_TEST": "embedding-an-image-capybara-screenshot" },
     "agent_query_rules": ["agent-test=true"]
