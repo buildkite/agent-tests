@@ -8,11 +8,11 @@ ECHO Hello World!
 
 ECHO --- Settings Data
 
-call buildkite-agent build-data set foo bar
+call buildkite-agent meta-data set foo bar
 
 ECHO --- Joke
 
-call buildkite-agent build-data get foo > __value.tmp
+call buildkite-agent meta-data get foo > __value.tmp
 SET /p VALUE=<__value.tmp
 DEL __value.tmp
 
