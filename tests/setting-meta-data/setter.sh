@@ -12,6 +12,6 @@ fi
 echo "Key: $KEY_TO_SET"
 echo "Value: $VALUE_TO_SET"
 
-buildkite-agent meta-data $KEY_TO_SET $VALUE_TO_SET
+buildkite-agent meta-data set $KEY_TO_SET $VALUE_TO_SET
 
 echo "All done!"

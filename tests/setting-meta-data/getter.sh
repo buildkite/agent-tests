@@ -7,4 +7,4 @@ fi
 
 echo "Key: $KEY_TO_GET"
 
-echo `buildkite-data meta-data get $KEY_TO_GET`
+echo `buildkite-agent meta-data get $KEY_TO_GET`
