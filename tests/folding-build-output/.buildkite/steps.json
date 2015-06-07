@@ -1,6 +1,6 @@
 [
   {
-    "name": ":console",
+    "name": ":console:",
     "command": "script.sh",
     "env": { "AGENT_TEST": "folding-build-output" }
   }
