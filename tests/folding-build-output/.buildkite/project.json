@@ -1,0 +1,12 @@
+{
+  "name": "folding-build-output",
+  "repository": "https://github.com/buildkite/agent-tests.git",
+  "env": {
+    "AGENT_TEST": "folding-build-output"
+  },
+  "steps": [
+    {
+      "command": "buildkite-agent pipeline upload"
+    }
+  ]
+}
