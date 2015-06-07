@@ -3,5 +3,21 @@
     "name": ":console:",
     "command": "script.sh",
     "env": { "AGENT_TEST": "folding-build-output" }
+  },
+  {
+    "type": "waiter"
+  },
+  {
+    "name": ":console:",
+    "command": "script.sh",
+    "env": { "AGENT_TEST": "folding-build-output" }
+  },
+  {
+    "type": "manual"
+  },
+  {
+    "name": ":console:",
+    "command": "script.sh",
+    "env": { "AGENT_TEST": "folding-build-output" }
   }
 ]
