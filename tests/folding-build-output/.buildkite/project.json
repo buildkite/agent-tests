@@ -6,6 +6,7 @@
   },
   "steps": [
     {
+      "name": ":buildkite:",
       "command": "buildkite-agent pipeline upload"
     }
   ]
