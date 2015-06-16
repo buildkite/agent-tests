@@ -36,7 +36,7 @@ fi
 for fn in "$@"
 do
   if [ -r "$fn" ] ; then
-    print_image "$fn" 1 "$(base64 < "$fn")"
+    print_image "$fn" 1 "$(base64 < "$fn" | tr -d '\n')"
   else
     echo "imgcat: $fn: No such file or directory"
     exit 1
