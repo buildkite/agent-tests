@@ -1,0 +1,13 @@
+{
+  "name": "waiting-steps",
+  "repository": "https://github.com/buildkite/agent-tests.git",
+  "env": {
+    "AGENT_TEST": "waiting-steps"
+  },
+  "steps": [
+    {
+      "name": ":buildkite:",
+      "command": "buildkite-agent pipeline upload"
+    }
+  ]
+}
