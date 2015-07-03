@@ -243,8 +243,5 @@
   {
     "name": ":console:",
     "command": "echo test"
-  },
-  {
-    "type": "waiter"
   }
 ]
