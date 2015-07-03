@@ -1,5 +1,106 @@
 [
   {
+    "type": "waiter"
+  },
+  {
+    "name": ":console:",
+    "command": "echo test"
+  },
+  {
+    "type": "waiter"
+  },
+  {
+    "name": ":console:",
+    "command": "echo test"
+  },
+  {
+    "type": "waiter"
+  },
+  {
+    "name": ":console:",
+    "command": "echo test"
+  },
+  {
+    "type": "waiter"
+  },
+  {
+    "name": ":console:",
+    "command": "echo test"
+  },
+  {
+    "type": "waiter"
+  },
+  {
+    "name": ":console:",
+    "command": "echo test"
+  },
+  {
+    "type": "waiter"
+  },
+  {
+    "name": ":console:",
+    "command": "echo test"
+  },
+  {
+    "type": "waiter"
+  },
+  {
+    "name": ":console:",
+    "command": "echo test"
+  },
+  {
+    "type": "waiter"
+  },
+  {
+    "name": ":console:",
+    "command": "echo test"
+  },
+  {
+    "type": "waiter"
+  },
+  {
+    "name": ":console:",
+    "command": "echo test"
+  },
+  {
+    "type": "waiter"
+  },
+  {
+    "name": ":console:",
+    "command": "echo test"
+  },
+  {
+    "type": "waiter"
+  },
+  {
+    "name": ":console:",
+    "command": "echo test"
+  },
+  {
+    "type": "waiter"
+  },
+  {
+    "name": ":console:",
+    "command": "echo test"
+  },
+  {
+    "type": "waiter"
+  },
+  {
+    "name": ":console:",
+    "command": "echo test"
+  },
+  {
+    "type": "waiter"
+  },
+  {
+    "name": ":console:",
+    "command": "echo test"
+  },
+  {
+    "type": "waiter"
+  },
+  {
     "name": ":console:",
     "command": "echo test"
   },
