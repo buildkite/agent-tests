@@ -1,0 +1,8 @@
+[
+  {
+    "name": ":console:",
+    "command": "echo hello",
+    "parallelism": 30,
+    "agent_query_rules": [ "queue=*" ]
+  }
+]
