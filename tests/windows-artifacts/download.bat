@@ -1,39 +1,49 @@
 ECHO --- Downloading fixtures/embedded/folder/AlfredHitchcock.jpg
-mkdir d1
-call buildkite-agent artifact download "fixtures/embedded/folder/AlfredHitchcock.jpg" "d1"
+MKDIR d1
+CALL buildkite-agent artifact download "fixtures/embedded/folder/AlfredHitchcock.jpg" "d1"
+IF %ERRORLEVEL% NEQ 0 EXIT %ERRORLEVEL%
 
 ECHO --- Downloading fixtures/embedded/folder/*
-mkdir d2
-call buildkite-agent artifact download "fixtures/embedded/folder/*" "d2"
+MKDIR d2
+CALL buildkite-agent artifact download "fixtures/embedded/folder/*" "d2"
+IF %ERRORLEVEL% NEQ 0 EXIT %ERRORLEVEL%
 
 ECHO --- Downloading fixtures/embedded/**/*
-mkdir d3
-call buildkite-agent artifact download "fixtures/embedded/**/*" "d3"
+MKDIR d3
+CALL buildkite-agent artifact download "fixtures/embedded/**/*" "d3"
+IF %ERRORLEVEL% NEQ 0 EXIT %ERRORLEVEL%
 
 ECHO --- Downloading fixtures/**/*
-mkdir d4
-call buildkite-agent artifact download "fixtures/**/*" "d4"
+MKDIR d4
+CALL buildkite-agent artifact download "fixtures/**/*" "d4"
+IF %ERRORLEVEL% NEQ 0 EXIT %ERRORLEVEL%
 
 ECHO --- Downloading **/*
-mkdir d5
-call buildkite-agent artifact download "**/*" "d5"
+MKDIR d5
+CALL buildkite-agent artifact download "**/*" "d5"
+IF %ERRORLEVEL% NEQ 0 EXIT %ERRORLEVEL%
 
 ECHO --- Downloading fixtures\embedded\folder\AlfredHitchcock.jpg
-mkdir d6
-call buildkite-agent artifact download "fixtures\embedded\folder\AlfredHitchcock.jpg" "d6"
+MKDIR d6
+CALL buildkite-agent artifact download "fixtures\embedded\folder\AlfredHitchcock.jpg" "d6"
+IF %ERRORLEVEL% NEQ 0 EXIT %ERRORLEVEL%
 
 ECHO --- Downloading fixtures\embedded\folder\*
-mkdir d7
-call buildkite-agent artifact download "fixtures\embedded\folder\*" "d7"
+MKDIR d7
+CALL buildkite-agent artifact download "fixtures\embedded\folder\*" "d7"
+IF %ERRORLEVEL% NEQ 0 EXIT %ERRORLEVEL%
 
 ECHO --- Downloading fixtures\embedded\**\*
-mkdir d8
-call buildkite-agent artifact download "fixtures\embedded\**\*" "d8"
+MKDIR d8
+CALL buildkite-agent artifact download "fixtures\embedded\**\*" "d8"
+IF %ERRORLEVEL% NEQ 0 EXIT %ERRORLEVEL%
 
 ECHO --- Downloading fixtures\**\*
-mkdir d9
-call buildkite-agent artifact download "fixtures\**\*" "d9"
+MKDIR d9
+CALL buildkite-agent artifact download "fixtures\**\*" "d9"
+IF %ERRORLEVEL% NEQ 0 EXIT %ERRORLEVEL%
 
 ECHO --- Downloading **\*
-mkdir d10
-call buildkite-agent artifact download "**\*" "d10"
+MKDIR d10
+CALL buildkite-agent artifact download "**\*" "d10"
+IF %ERRORLEVEL% NEQ 0 EXIT %ERRORLEVEL%
