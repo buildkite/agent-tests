@@ -1,0 +1,13 @@
+{
+  "name": "embedding-an-image-reference",
+  "repository": "https://github.com/buildkite/agent-tests.git",
+  "env": {
+    "AGENT_TEST": "embedding-an-image-reference"
+  },
+  "steps": [
+    {
+      "name": ":buildkite:",
+      "command": "buildkite-agent pipeline upload"
+    }
+  ]
+}

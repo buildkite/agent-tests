@@ -1,0 +1,13 @@
+{
+  "name": "executing-a-command",
+  "repository": "https://github.com/buildkite/agent-tests.git",
+  "env": {
+    "AGENT_TEST": "executing-a-command"
+  },
+  "steps": [
+    {
+      "name": ":buildkite:",
+      "command": "buildkite-agent pipeline upload"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+[
+  {
+    "type": "script",
+    "name": "CentOS with progress bar output",
+    "command": "ci.sh",
+    "env": {
+      "BUILDKITE_DOCKER_COMPOSE_CONTAINER": "app"
+    },
+    "agent_query_rules": ["agent-test=true"]
+  }
+]

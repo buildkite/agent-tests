@@ -1,0 +1,13 @@
+{
+  "name": "setting-meta-data",
+  "repository": "https://github.com/buildkite/agent-tests.git",
+  "env": {
+    "AGENT_TEST": "setting-meta-data"
+  },
+  "steps": [
+    {
+      "name": ":buildkite:",
+      "command": "buildkite-agent pipeline upload"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+[
+  {
+    "type": "script",
+    "name": "Executing a command",
+    "command": "cat file.txt",
+    "env": { "AGENT_TEST": "executing-a-command" },
+    "agent_query_rules": ["agent-test=true"]
+  }
+]

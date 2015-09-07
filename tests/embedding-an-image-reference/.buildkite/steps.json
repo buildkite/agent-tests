@@ -1,0 +1,24 @@
+[
+  {
+    "type": "script",
+    "name": "Referencing an artifact image",
+    "command": "artifact.sh",
+    "artifact_paths": "*.gif;*.png",
+    "env": { "AGENT_TEST": "embedding-an-image-reference" },
+    "agent_query_rules": ["agent-test=true"]
+  },
+    {
+    "type": "script",
+    "name": "Referencing an external http image",
+    "command": "external_http_image.sh",
+    "env": { "AGENT_TEST": "embedding-an-image-reference" },
+    "agent_query_rules": ["agent-test=true"]
+  },
+  {
+    "type": "script",
+    "name": "Referencing an external https image",
+    "command": "external_https_image.sh",
+    "env": { "AGENT_TEST": "embedding-an-image-reference" },
+    "agent_query_rules": ["agent-test=true"]
+  }
+]

@@ -1,0 +1,13 @@
+[
+  {
+    "type": "script",
+    "command": "setter.sh"
+  },
+  {
+    "type": "waiter"
+  },
+  {
+    "type": "script",
+    "command": "getter.sh"
+  }
+]
