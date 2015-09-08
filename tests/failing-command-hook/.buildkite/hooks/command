@@ -5,10 +5,8 @@ if [[ "$BUILDKITE_COMMAND" == "buildkite-agent pipeline upload" ]]; then
   buildkite-agent pipeline upload
 elif [[ "$BUILDKITE_COMMAND" -ne "" ]]; then
   echo "Whaaa? You shouldn't be running that..."
-  hollash "123"
   exit 1
 else
   echo "This command will totally fail, wicked!"
-  hollash "123"
   exit 1
 fi
