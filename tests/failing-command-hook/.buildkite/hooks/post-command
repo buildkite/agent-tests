@@ -1,0 +1,2 @@
+echo "This is the post command hook, and it should totally run, yo."
+echo ⛄️
