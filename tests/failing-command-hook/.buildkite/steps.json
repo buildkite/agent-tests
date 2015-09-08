@@ -1,6 +1,7 @@
 [
   {
     "name": ":console:",
-    "env": { "AGENT_TEST": "failing-command-hook" }
+    "env": { "AGENT_TEST": "failing-command-hook" },
+    "agent_query_rules": [ "queue=linux" ]
   }
 ]
