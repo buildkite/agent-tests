@@ -1,6 +1,7 @@
 #!/bin/bash
 
 if [[ "$BUILDKITE_COMMAND" == "buildkite-agent pipeline upload" ]]; then
+  echo "Since you asked so nicely, I'll run that command for you, from within the the custom command hook"
   buildkite-agent pipeline upload
 elif [[ "$BUILDKITE_COMMAND/command" -ne "" ]]; then
   echo "Whaaa? You shouldn't be running that..."
