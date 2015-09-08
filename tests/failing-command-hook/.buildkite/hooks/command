@@ -1,0 +1,2 @@
+echo "This command will totally fail, wicked!"
+exit 1

@@ -1,0 +1,6 @@
+[
+  {
+    "name": ":console:",
+    "env": { "AGENT_TEST": "failing-command-hook" }
+  }
+]
