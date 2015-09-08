@@ -1,2 +1,11 @@
-echo "This command will totally fail, wicked!"
-exit 1
+#!/bin/bash
+
+if [[ "$BUILDKITE_COMMAND" == "buildkite-agent pipeline upload" ]]; then
+  buildkite-agent pipeline upload
+elif [[ "$BUILDKITE_COMMAND/command" -ne "" ]]; then
+  echo "Whaaa? You shouldn't be running that..."
+  exit 1
+else
+  echo "This command will totally fail, wicked!"
+  exit 1
+fi
