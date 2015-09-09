@@ -5,4 +5,4 @@ if [[ "$AGENT_TEST" == "" ]]; then
   exit 1
 fi
 
-BUILDKITE_BUILD_CHECKOUT_PATH=tests/$AGENT_TEST
+buildkite-agent-bootstrap-checkout-path "tests/$AGENT_TEST"
