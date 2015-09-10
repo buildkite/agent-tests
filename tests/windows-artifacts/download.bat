@@ -1,6 +1,6 @@
-ECHO --- Downloading fixtures/embedded/folder/AlfredHitchcock.jpg
+ECHO --- Downloading fixtures/embedded/folder/hitchcock.jpg
 MKDIR d1
-CALL buildkite-agent artifact download "fixtures/embedded/folder/AlfredHitchcock.jpg" "d1"
+CALL buildkite-agent artifact download "fixtures/embedded/folder/hitchcock.jpg" "d1"
 IF %ERRORLEVEL% NEQ 0 EXIT %ERRORLEVEL%
 
 ECHO --- Downloading fixtures/embedded/folder/*
@@ -23,9 +23,9 @@ MKDIR d5
 CALL buildkite-agent artifact download "**/*" "d5"
 IF %ERRORLEVEL% NEQ 0 EXIT %ERRORLEVEL%
 
-ECHO --- Downloading fixtures\embedded\folder\AlfredHitchcock.jpg
+ECHO --- Downloading fixtures\embedded\folder\hitchcock.jpg
 MKDIR d6
-CALL buildkite-agent artifact download "fixtures\embedded\folder\AlfredHitchcock.jpg" "d6"
+CALL buildkite-agent artifact download "fixtures\embedded\folder\hitchcock.jpg" "d6"
 IF %ERRORLEVEL% NEQ 0 EXIT %ERRORLEVEL%
 
 ECHO --- Downloading fixtures\embedded\folder\*
