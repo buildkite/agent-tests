@@ -4,7 +4,7 @@ SET
 
 ECHO --- Other Things
 
-ECHO Hello World!
+ECHO Goodbye Agin World!
 
 ECHO --- Settings Data
 
