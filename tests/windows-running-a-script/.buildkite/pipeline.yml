@@ -8,6 +8,8 @@ steps:
     name: ":windows: command"
     env:
       WHAT_IS_IT: "best"
-    command: "ECHO this is the %WHAT_IS_IT% thing ever"
+    command: |
+      ECHO this is the %WHAT_IS_IT% thing ever
+      ECHO and this is the second line of that code
     agents:
       - "queue=windows"
