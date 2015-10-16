@@ -2,8 +2,12 @@ steps:
   -
     name: ":windows: script"
     command: "windows.bat"
+    agents:
+      - "queue=windows"
   -
     name: ":windows: command"
     env:
       WHAT_IS_IT: "best"
     command: "ECHO this is the %WHAT_IS_IT% thing ever"
+    agents:
+      - "queue=windows"
