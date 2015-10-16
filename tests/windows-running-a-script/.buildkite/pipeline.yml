@@ -1,9 +1,9 @@
 steps:
   -
-    name: ":windows script"
+    name: ":windows: script"
     command: "windows.bat"
   -
-    name: ":windows command"
+    name: ":windows: command"
     env:
       WHAT_IS_IT: "best"
     command: "ECHO this is the %WHAT_IS_IT% thing ever"
