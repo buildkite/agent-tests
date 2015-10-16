@@ -1,5 +1,5 @@
 IF "%AGENT_TEST%" == "" (
-  echo "\%AGENT_TEST\% has not been set"
+  echo "AGENT_TEST has not been set"
   exit 1
 )
 
