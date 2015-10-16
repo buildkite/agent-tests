@@ -1,3 +1,5 @@
+@echo off
+
 ECHO --- Environment Variables
 
 SET
