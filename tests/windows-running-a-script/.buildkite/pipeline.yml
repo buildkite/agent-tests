@@ -2,6 +2,7 @@ steps:
   -
     name: ":windows: script"
     command: "windows.bat"
+    artifact_paths: "*.bat"
     agents:
       - "queue=windows"
   -
