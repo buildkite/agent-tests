@@ -11,5 +11,6 @@ steps:
     command: |
       ECHO this is the %WHAT_IS_IT% thing ever
       ECHO and this is the second line of that code
+      ECHO of course if you do this \n then that's silly
     agents:
       - "queue=windows"
