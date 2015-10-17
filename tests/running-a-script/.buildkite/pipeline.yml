@@ -14,8 +14,8 @@ steps:
     agents:
       docker: true
     plugins:
-      github.com/buildkite/plugins/docker-compose:
-        container: "app"
+      - github.com/buildkite/plugins/docker-compose:
+          container: "app"
 
   - waiter
 
@@ -31,8 +31,8 @@ steps:
     agents:
       docker: true
     plugins:
-      github.com/buildkite/plugins/docker-compose:
-        container: "app"
+      - github.com/buildkite/plugins/docker-compose:
+          container: "app"
 
   - waiter
 
@@ -46,8 +46,8 @@ steps:
     agents:
       docker: true
     plugins:
-      github.com/buildkite/plugins/docker-compose:
-        container: "app"
+      - github.com/buildkite/plugins/docker-compose:
+          container: "app"
 
   - waiter
 
@@ -58,9 +58,6 @@ steps:
       echo "hello"
     agents:
       docker: true
-    plugins:
-      github.com/buildkite/plugins/docker-compose:
-        container: "app"
 
   -
     name: ':docker: ls -lsa; echo "hello"'
@@ -70,5 +67,5 @@ steps:
     agents:
       docker: true
     plugins:
-      github.com/buildkite/plugins/docker-compose:
-        container: "app"
+      - github.com/buildkite/plugins/docker-compose:
+          container: "app"
