@@ -1,6 +1,6 @@
 steps:
   -
-    command: "this-script-doesn-have-chmod-x.sh"
+    command: ":console: this-script-doesn-have-chmod-x.sh"
     agents:
       - "docker=true"
   -
@@ -13,7 +13,7 @@ steps:
   -
     type: "waiter"
   -
-    command: "script.sh"
+    command: ":console: script.sh"
     agents:
       - "docker=true"
   -
@@ -26,7 +26,7 @@ steps:
   -
     type: "waiter"
   -
-    command: "this is a test/and this is a script.sh"
+    command: ":console: this is a test/and this is a script.sh"
     agents:
       - "docker=true"
   -
@@ -39,6 +39,7 @@ steps:
   -
     type: "waiter"
   -
+    name: ':console: ls -lsa; echo "hello"'
     command: |
       ls -lsa
       echo "hello"
