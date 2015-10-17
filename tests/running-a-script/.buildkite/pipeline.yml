@@ -11,11 +11,11 @@ steps:
   -
     name: ":docker: this-script-doesn-have-chmod-x.sh"
     command: "this-script-doesn-have-chmod-x.sh"
+    agents:
+      docker: true
     plugins:
       github.com/buildkite/plugins/docker-compose:
         container: "app"
-    agents:
-      docker: true
 
   - waiter
 
@@ -29,7 +29,7 @@ steps:
     name: ":docker: script.sh"
     command: "script.sh"
     agents:
-      - "docker=true"
+      docker: true
     plugins:
       github.com/buildkite/plugins/docker-compose:
         container: "app"
