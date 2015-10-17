@@ -1,23 +1,49 @@
 steps:
   -
-    name: "Simple script"
-    command: "script.sh"
-    agents:
-      - "docker=true"
-  -
-    name: "Script without u+x"
     command: "this-script-doesn-have-chmod-x.sh"
     agents:
       - "docker=true"
   -
-    name: "Script in a subdir with spaces"
-    command: "running-a-script/and this is a script.sh"
+    name: ":docker: this-script-doesn-have-chmod-x.sh"
+    command: "this-script-doesn-have-chmod-x.sh"
     agents:
       - "docker=true"
   -
-    name: "Script run via Docker Compose"
+    type: "waiter"
+  -
     command: "script.sh"
-    env:
-      BUILDKITE_DOCKER_COMPOSE_CONTAINER: "app"
     agents:
       - "docker=true"
+  -
+    name: ":docker: script.sh"
+    command: "script.sh"
+    agents:
+      - "docker=true"
+  -
+    type: "waiter"
+  -
+    command: "this is a test/and this is a script.sh"
+    agents:
+      - "docker=true"
+  -
+    name: ":docker:this is a test/and this is a script.sh"
+    command: "this is a test/and this is a script.sh"
+    agents:
+      - "docker=true"
+  -
+    type: "waiter"
+  -
+    command: |
+      ls -lsa
+      echo "hello"
+    agents:
+      - "docker=true"
+  -
+    name: ':docker: ls -lsa; echo "hello"'
+    command: |
+      ls -lsa
+      echo "hello"
+    agents:
+      - "docker=true"
+  -
+    type: "waiter"
