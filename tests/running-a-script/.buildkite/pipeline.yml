@@ -6,15 +6,16 @@ steps:
     name: ":console: this-script-doesn-have-chmod-x.sh"
     command: "this-script-doesn-have-chmod-x.sh"
     agents:
-      - "docker=true"
+      docker: true
 
   -
     name: ":docker: this-script-doesn-have-chmod-x.sh"
     command: "this-script-doesn-have-chmod-x.sh"
-    env:
-      BUILDKITE_DOCKER_COMPOSE_CONTAINER: "app"
+    plugins:
+      github.com/buildkite/plugins/docker-compose:
+        container: "app"
     agents:
-      - "docker=true"
+      docker: true
 
   - waiter
 
@@ -22,31 +23,31 @@ steps:
     name: ":console: script.sh"
     command: "script.sh"
     agents:
-      - "docker=true"
+      docker: true
 
   -
     name: ":docker: script.sh"
     command: "script.sh"
     agents:
       - "docker=true"
-    env:
-      BUILDKITE_DOCKER_COMPOSE_CONTAINER: "app"
+    plugins:
+      github.com/buildkite/plugins/docker-compose:
+        container: "app"
 
   - waiter
 
   -
     name: ":console: this is a test/and this is a script.sh"
     command: "this is a test/and this is a script.sh"
-    agents:
-      - "docker=true"
 
   -
     name: ":docker: this is a test/and this is a script.sh"
     command: "this is a test/and this is a script.sh"
     agents:
-      - "docker=true"
-    env:
-      BUILDKITE_DOCKER_COMPOSE_CONTAINER: "app"
+      docker: true
+    plugins:
+      github.com/buildkite/plugins/docker-compose:
+        container: "app"
 
   - waiter
 
@@ -56,7 +57,10 @@ steps:
       ls -lsa
       echo "hello"
     agents:
-      - "docker=true"
+      docker: true
+    plugins:
+      github.com/buildkite/plugins/docker-compose:
+        container: "app"
 
   -
     name: ':docker: ls -lsa; echo "hello"'
@@ -64,6 +68,7 @@ steps:
       ls -lsa
       echo "hello"
     agents:
-      - "docker=true"
-    env:
-      BUILDKITE_DOCKER_COMPOSE_CONTAINER: "app"
+      docker: true
+    plugins:
+      github.com/buildkite/plugins/docker-compose:
+        container: "app"
