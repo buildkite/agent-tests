@@ -2,6 +2,8 @@ steps:
   -
     name: ":console:"
     command: "script.sh"
+    agents:
+     - "linux=true"
   -
     name: ":llama:"
     env:
@@ -10,13 +12,19 @@ steps:
       echo "this is the $WHAT_IS_IT thing ever"
       echo "and this is the second line of that code"
       echo "of course if you do this \n then that's silly"
+    agents:
+     - "linux=true"
   -
     type: waiter
   -
     name: ":console:"
     command: "script.sh"
+    agents:
+     - "linux=true"
   -
     type: manual
   -
     name: ":console:"
     command: "script.sh"
+    agents:
+     - "linux=true"
