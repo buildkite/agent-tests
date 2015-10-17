@@ -4,8 +4,10 @@ steps:
     command: "script.sh"
   -
     name: ":llama:"
+    env:
+      WHAT_IS_IT: "best"
     command: |
-      echo "this is the %WHAT_IS_IT% thing ever"
+      echo "this is the $WHAT_IS_IT thing ever"
       echo "and this is the second line of that code"
       echo "of course if you do this \n then that's silly"
   -
