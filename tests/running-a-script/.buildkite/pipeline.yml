@@ -1,11 +1,13 @@
 env:
   THIS_GLOBAL_ENV: "true"
+
 steps:
   -
     name: ":console: this-script-doesn-have-chmod-x.sh"
     command: "this-script-doesn-have-chmod-x.sh"
     agents:
       - "docker=true"
+
   -
     name: ":docker: this-script-doesn-have-chmod-x.sh"
     command: "this-script-doesn-have-chmod-x.sh"
@@ -13,13 +15,15 @@ steps:
       BUILDKITE_DOCKER_COMPOSE_CONTAINER: "app"
     agents:
       - "docker=true"
-  -
-    type: "waiter"
+
+  - waiter
+
   -
     name: ":console: script.sh"
     command: "script.sh"
     agents:
       - "docker=true"
+
   -
     name: ":docker: script.sh"
     command: "script.sh"
@@ -27,13 +31,15 @@ steps:
       - "docker=true"
     env:
       BUILDKITE_DOCKER_COMPOSE_CONTAINER: "app"
-  -
-    type: "waiter"
+
+  - waiter
+
   -
     name: ":console: this is a test/and this is a script.sh"
     command: "this is a test/and this is a script.sh"
     agents:
       - "docker=true"
+
   -
     name: ":docker: this is a test/and this is a script.sh"
     command: "this is a test/and this is a script.sh"
@@ -41,8 +47,9 @@ steps:
       - "docker=true"
     env:
       BUILDKITE_DOCKER_COMPOSE_CONTAINER: "app"
-  -
-    type: "waiter"
+
+  - waiter
+
   -
     name: ':console: ls -lsa; echo "hello"'
     command: |
@@ -50,6 +57,7 @@ steps:
       echo "hello"
     agents:
       - "docker=true"
+
   -
     name: ':docker: ls -lsa; echo "hello"'
     command: |
