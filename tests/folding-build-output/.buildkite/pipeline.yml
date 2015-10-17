@@ -1,0 +1,20 @@
+steps:
+  -
+    name: ":console:"
+    command: "script.sh"
+  -
+    name: ":llama:"
+    command: |
+      echo "this is the %WHAT_IS_IT% thing ever"
+      echo "and this is the second line of that code"
+      echo "of course if you do this \n then that's silly"
+  -
+    type: waiter
+  -
+    name: ":console:"
+    command: "script.sh"
+  -
+    type: manual
+  -
+    name: ":console:"
+    command: "script.sh"
