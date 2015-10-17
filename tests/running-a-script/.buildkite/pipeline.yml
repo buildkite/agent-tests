@@ -3,21 +3,21 @@ steps:
     name: "Simple script"
     command: "script.sh"
     agents:
-      - "agent-test=true"
+      - "docker=true"
   -
     name: "Script without u+x"
     command: "this-script-doesn-have-chmod-x.sh"
     agents:
-      - "agent-test=true"
+      - "docker=true"
   -
     name: "Script in a subdir with spaces"
     command: "running-a-script/and this is a script.sh"
     agents:
-      - "agent-test=true"
+      - "docker=true"
   -
     name: "Script run via Docker Compose"
     command: "script.sh"
     env:
       BUILDKITE_DOCKER_COMPOSE_CONTAINER: "app"
     agents:
-      - "agent-test=true"
+      - "docker=true"
