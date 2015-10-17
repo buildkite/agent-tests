@@ -1,3 +1,5 @@
+env:
+  THIS_GLOBAL_ENV: "true"
 steps:
   -
     name: ":console: this-script-doesn-have-chmod-x.sh"
