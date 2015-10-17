@@ -6,6 +6,8 @@ steps:
   -
     name: ":docker: this-script-doesn-have-chmod-x.sh"
     command: "this-script-doesn-have-chmod-x.sh"
+    env:
+      BUILDKITE_DOCKER_COMPOSE_CONTAINER: "app"
     agents:
       - "docker=true"
   -
@@ -19,6 +21,8 @@ steps:
     command: "script.sh"
     agents:
       - "docker=true"
+    env:
+      BUILDKITE_DOCKER_COMPOSE_CONTAINER: "app"
   -
     type: "waiter"
   -
@@ -30,6 +34,8 @@ steps:
     command: "this is a test/and this is a script.sh"
     agents:
       - "docker=true"
+    env:
+      BUILDKITE_DOCKER_COMPOSE_CONTAINER: "app"
   -
     type: "waiter"
   -
@@ -45,5 +51,7 @@ steps:
       echo "hello"
     agents:
       - "docker=true"
+    env:
+      BUILDKITE_DOCKER_COMPOSE_CONTAINER: "app"
   -
     type: "waiter"
