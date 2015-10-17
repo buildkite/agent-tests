@@ -30,7 +30,7 @@ steps:
     agents:
       - "docker=true"
   -
-    name: ":docker:this is a test/and this is a script.sh"
+    name: ":docker: this is a test/and this is a script.sh"
     command: "this is a test/and this is a script.sh"
     agents:
       - "docker=true"
