@@ -14,7 +14,7 @@ steps:
     agents:
       docker: true
     plugins:
-      - github.com/buildkite/plugins/docker-compose:
+      - ssh://github.com/buildkite/plugins/docker-compose:
           container: "app"
 
   - waiter
@@ -31,7 +31,7 @@ steps:
     agents:
       docker: true
     plugins:
-      - github.com/buildkite/plugins/docker-compose:
+      - ssh://github.com/buildkite/plugins/docker-compose:
           container: "app"
 
   - waiter
@@ -46,7 +46,7 @@ steps:
     agents:
       docker: true
     plugins:
-      - github.com/buildkite/plugins/docker-compose:
+      - ssh://github.com/buildkite/plugins/docker-compose:
           container: "app"
 
   - waiter
@@ -67,5 +67,5 @@ steps:
     agents:
       docker: true
     plugins:
-      - github.com/buildkite/plugins/docker-compose:
+      - ssh://github.com/buildkite/plugins/docker-compose:
           container: "app"
