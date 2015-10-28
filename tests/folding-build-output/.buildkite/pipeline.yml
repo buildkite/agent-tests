@@ -1,11 +1,10 @@
 steps:
-  -
-    name: ":console:"
+  - name: ":console:"
     command: "script.sh"
     agents:
-     - "linux=true"
-  -
-    name: ":llama:"
+      linux: true
+
+  - name: ":llama:"
     env:
       WHAT_IS_IT: "best"
     command: |
@@ -13,18 +12,18 @@ steps:
       echo "and this is the second line of that code"
       echo "of course if you do this \n then that's silly"
     agents:
-     - "linux=true"
-  -
-    type: waiter
-  -
-    name: ":console:"
+      linux: true
+
+  - wait
+
+  - name: ":console:"
     command: "script.sh"
     agents:
-     - "linux=true"
-  -
-    type: manual
-  -
-    name: ":console:"
+      linux: true
+
+  - manual
+
+  - name: ":console:"
     command: "script.sh"
     agents:
-     - "linux=true"
+      linux: true
