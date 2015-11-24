@@ -1,0 +1,9 @@
+steps:
+  - script:
+      command: "fail-then-succeed.sh"
+      name: ":console:"
+  - wait
+  - script:
+      command: "echo hooray!"
+      name: ":tada:"
+
