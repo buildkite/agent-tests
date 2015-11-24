@@ -2,6 +2,7 @@ steps:
   - script:
       command: "fail-then-succeed.sh"
       name: ":console:"
+      artifacts: "*.sh"
   - wait
   - script:
       command: "echo hooray!"
