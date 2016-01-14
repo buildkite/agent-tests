@@ -1,5 +1,6 @@
 steps:
   - name: ":console:"
-    command: "script.sh"
+    command: |
+      echo "Nothing to see here, move along!"
     agents:
       linux: true
