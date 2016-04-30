@@ -1,0 +1,2 @@
+steps:
+  - trigger: "running-a-script"
