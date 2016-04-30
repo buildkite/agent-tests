@@ -1,2 +1,11 @@
 steps:
   - trigger: "running-a-script"
+    label: "Trigger :pipeline: Party!"
+    build:
+      message: "Best build ever!"
+      commit: "HEAD"
+      branch: "master"
+      meta_data:
+        foo: "bar"
+      env:
+        MY_CUSTOM_ENV: "is great"
