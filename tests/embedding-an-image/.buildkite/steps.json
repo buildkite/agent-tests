@@ -3,14 +3,12 @@
     "type": "script",
     "name": "Embedded gif image",
     "command": "gif.sh",
-    "env": { "AGENT_TEST": "embedding-an-image" },
-    "agent_query_rules": ["agent-test=true"]
+    "env": { "AGENT_TEST": "embedding-an-image" }
   },
   {
     "type": "script",
     "name": "Embedded png image",
     "command": "png.sh",
-    "env": { "AGENT_TEST": "embedding-an-image" },
-    "agent_query_rules": ["agent-test=true"]
+    "env": { "AGENT_TEST": "embedding-an-image" }
   }
 ]
