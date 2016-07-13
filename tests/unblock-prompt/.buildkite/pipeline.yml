@@ -6,7 +6,6 @@ steps:
         key: "version"
         default: "This is the default value"
       - select: "Choose on of these"
-        default: "Staging"
         key: "deploy-target"
         options:
           - Staging
@@ -14,7 +13,6 @@ steps:
           - QA2
           - Production
       - select: "What team should be notified after the deployment?"
-        default: "All"
         key: "notify-team"
         options:
           - All
@@ -28,10 +26,10 @@ steps:
           - Directors
   - label: ":console:"
     command: >
-      echo "--- Version"
+      echo "--- Version\n"
       buildkite-agent meta-data get version
-      echo "--- Deploy Target"
+      echo "--- Deploy Target\n"
       buildkite-agent meta-data get deploy-target
-      echo "--- Notify Team"
+      echo "--- Notify Team\n"
       buildkite-agent meta-data get notify-team
 
