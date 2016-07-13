@@ -28,7 +28,10 @@ steps:
           - Directors
   - label: ":console:"
     command: >
-      echo "Version: `buildkite-agent meta-data get version`"
-      echo "Deploy Target: `buildkite-agent meta-data get deploy-target`"
-      echo "Notify Team: `buildkite-agent meta-data get notify-team`"
+      echo "--- Version"
+      buildkite-agent meta-data get version
+      echo "--- Deploy Target"
+      buildkite-agent meta-data get deploy-target
+      echo "--- Notify Team"
+      buildkite-agent meta-data get notify-team
 
