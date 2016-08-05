@@ -12,6 +12,13 @@ steps:
           - QA1
           - QA2
           - Production
+      - select: "Would you like a :taco: after this deploy?"
+        key: "taco"
+        default: "Yes"
+        options:
+          - Yes
+          - No
+          - ":llama:"
       - select: "What team should be notified after the deployment?"
         key: "notify-team"
         options:
@@ -28,8 +35,9 @@ steps:
     command: >
       echo "--- Version\n"
       buildkite-agent meta-data get version
+      echo "--- Food\n"
+      buildkite-agent meta-data get taco
       echo "--- Deploy Target\n"
       buildkite-agent meta-data get deploy-target
       echo "--- Notify Team\n"
       buildkite-agent meta-data get notify-team
-
