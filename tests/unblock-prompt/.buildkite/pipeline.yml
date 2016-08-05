@@ -5,6 +5,7 @@ steps:
       - text: "What version is this? :parrot:"
         key: "version"
         default: "This is the default value"
+        hint: "This is a hint :ruby:"
       - select: "Choose on of these"
         key: "deploy-target"
         options:
@@ -13,6 +14,7 @@ steps:
           - QA2
           - Production
       - select: "Would you like a :taco: after this deploy?"
+        hint: "Less than 6 options will show a radio, more than 6 will show a select box"
         key: "taco"
         default: "Yes"
         options:
@@ -21,6 +23,7 @@ steps:
           - ":llama:"
       - select: "What team should be notified after the deployment?"
         key: "notify-team"
+        hint: "Another great hint here"
         options:
           - All
           - None
@@ -30,7 +33,8 @@ steps:
           - Directors
           - Engineering
           - Support
-          - Directors
+          - QA
+
   - label: ":console:"
     command: >
       echo "--- Version\n"
@@ -41,3 +45,9 @@ steps:
       buildkite-agent meta-data get deploy-target
       echo "--- Notify Team\n"
       buildkite-agent meta-data get notify-team
+
+  - block: "Continue without input"
+
+  - label: ":console:"
+    command: >
+      echo "Sadness..."
