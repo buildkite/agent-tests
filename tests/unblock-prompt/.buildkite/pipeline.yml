@@ -37,13 +37,13 @@ steps:
 
   - label: ":console:"
     command: >
-      echo "--- Version\n"
+      echo -e "--- Version\n"
       buildkite-agent meta-data get version
-      echo "--- Food\n"
+      echo -e "--- Food\n"
       buildkite-agent meta-data get taco
-      echo "--- Deploy Target\n"
+      echo -e "--- Deploy Target\n"
       buildkite-agent meta-data get deploy-target
-      echo "--- Notify Team\n"
+      echo -e "--- Notify Team\n"
       buildkite-agent meta-data get notify-team
 
   - block: "Continue without input"
