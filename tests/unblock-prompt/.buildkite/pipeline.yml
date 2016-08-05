@@ -16,8 +16,8 @@ steps:
         key: "taco"
         default: "Yes"
         options:
-          - Yes
-          - No
+          - "Yes"
+          - "No"
           - ":llama:"
       - select: "What team should be notified after the deployment?"
         key: "notify-team"
