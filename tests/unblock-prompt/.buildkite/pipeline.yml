@@ -36,15 +36,7 @@ steps:
           - QA
 
   - label: ":console:"
-    command: >
-      echo -e "--- Version\n"
-      buildkite-agent meta-data get version
-      echo -e "--- Food\n"
-      buildkite-agent meta-data get taco
-      echo -e "--- Deploy Target\n"
-      buildkite-agent meta-data get deploy-target
-      echo -e "--- Notify Team\n"
-      buildkite-agent meta-data get notify-team
+    command: ".buildkite/results.sh"
 
   - block: "Continue without input"
 
