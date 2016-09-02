@@ -1,0 +1,8 @@
+steps:
+  - trigger: $BUILDKITE_PIPELINE_SLUG
+    build:
+      message: "Triggered by #$BUILDKITE_BUILD_NUMBER"
+      commit: $BUILDKITE_COMMIT
+      branch: $BUILDKITE_BRANCH
+      env:
+        AGENT_TEST: running-a-script
