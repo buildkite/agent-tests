@@ -1,10 +1,22 @@
 steps:
   - script:
+      label: ":console: Automatic retry"
       command: "fail-then-succeed.sh"
-      name: ":console:"
       artifact_paths: "*.sh"
+      retry:
+        - exit_status: 100..200
+          maximum: 1
+        - exit_status:
+            - 456
+          maximum: 1
+
+  - script:
+      label: ":console: Manual retry"
+      command: "fail-then-succeed.sh"
+      artifact_paths: "*.sh"
+
   - wait
+
   - script:
       command: "echo hooray!"
       name: ":tada:"
-
