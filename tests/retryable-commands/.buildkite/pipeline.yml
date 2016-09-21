@@ -8,6 +8,9 @@ steps:
           maximum: 1
         - exit_status:
             - 456
+            - 200..300
+          maximum: 1
+        - exit_status: 2
           maximum: 1
 
   - script:
