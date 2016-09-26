@@ -4,7 +4,7 @@ steps:
       command: "fail-then-succeed.sh"
       artifact_paths: "*.sh"
       retry:
-        exit_status:
+        exit_statuses:
           - 1
           - 100..200
           - 456
