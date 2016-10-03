@@ -1,0 +1,8 @@
+env:
+  AGENT_TEST: "embedding-an-image"
+
+steps:
+  - command: "gif.sh"
+    label: ":console: Embedded GIF"
+  - command: "png.sh"
+    label: ":console: Embedded PNG"
