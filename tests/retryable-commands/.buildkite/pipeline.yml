@@ -4,14 +4,19 @@ steps:
       command: "fail-then-succeed.sh"
       artifact_paths: "*.sh"
       retry:
-        # Docker for normal tests
-        - exit_status: -1
-          maximum: 10
-          stop_agent: true # stop the agent when receving this exit status
-          
-        # Rando docker failures on special snowflakes
-        - exit_status: 3
-          maximum: 10
+        # Disable manual retries for this job
+        manual: false
+        
+        # Setup some cases where a retry will happen automatically
+        automatic:
+          # Docker for normal tests
+          - exit_status: -1
+            maximum: 10
+            stop_agent: true # stop the agent when receving this exit status
+            
+          # Rando docker failures on special snowflakes
+          - exit_status: 3
+            maximum: 10
 
   - script:
       label: ":console: Manual retry"
