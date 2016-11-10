@@ -34,6 +34,15 @@ steps:
           - Engineering
           - Support
           - QA
+      - select: "What happens with exactly 6 options?"
+        key: "best-thing"
+        options:
+          - What
+          - A
+          - Great
+          - List
+          - Of
+          - Options
 
   - label: ":console:"
     command: ".buildkite/results.sh"
