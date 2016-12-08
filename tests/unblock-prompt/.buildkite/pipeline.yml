@@ -1,49 +1,31 @@
 steps:
-  - block: "Continue with input"
-    prompt: "Fill out the form below!"
-    fields:
-      - text: "What version is this? :parrot:"
-        key: "version"
-        default: "This is the default value"
-        hint: "This is a hint :ruby:"
-      - select: "Choose on of these"
-        key: "deploy-target"
-        options:
-          - Staging
-          - QA1
-          - QA2
-          - Production
-      - select: "Would you like a :taco: after this deploy?"
-        hint: "Less than 6 options will show a radio, more than 6 will show a select box"
-        key: "taco"
-        default: "Yes"
-        options:
-          - "Yes"
-          - "No"
-          - ":llama:"
-      - select: "What team should be notified after the deployment?"
-        key: "notify-team"
-        hint: "Another great hint here"
-        default: "Ops"
-        options:
-          - All
-          - None
-          - Billing
-          - Ops
-          - Sales
-          - Directors
-          - Engineering
-          - Support
-          - QA
-      - select: "What happens with exactly 6 options?"
-        key: "best-thing"
-        options:
-          - What
-          - A
-          - Great
-          - List
-          - Of
-          - Options
+  - block:
+  name: Release \:bookmark_tabs\:
+  prompt: Fill out the details for this release
+  fields: 
+    - text: Release notes
+      key: release-notes
+      hint: Enter your release notes here \:sparkles\:
+    - text: Release name
+      key: release-name
+      required: false
+    - select: Release type
+      key: release-type
+      default: Major
+      options:
+        - Major
+        - Minor
+        - Patch
+    - select: Team to notify after release
+      key: notify-team
+      options: 
+        - Ops
+        - Support
+        - Engineering
+        - QA
+        - Sales
+        - Directors
+        - Everyone
 
   - label: ":console:"
     command: ".buildkite/results.sh"
