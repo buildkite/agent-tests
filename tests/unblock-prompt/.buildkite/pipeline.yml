@@ -1,5 +1,5 @@
 steps:
-  - block:
+  - block
     name: "Release :bookmark_tabs:"
     prompt: Fill out the details for this release
     fields: 
