@@ -1,11 +1,11 @@
 steps:
   - block:
-    name: Release :bookmark_tabs:
+    name: "Release :bookmark_tabs:"
     prompt: Fill out the details for this release
     fields: 
       - text: Release notes
         key: release-notes
-        hint: Enter your release notes here :sparkles:
+        hint: "Enter your release notes here :sparkles:"
       - text: Release name
         key: release-name
         required: false
