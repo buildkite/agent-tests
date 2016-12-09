@@ -27,7 +27,7 @@ steps:
       - select: "Team to notify after release"
         key: "notify-team"
         options: 
-          - Ops
+          - Ops: "thing"
           - Support
           - Engineering
           - QA
