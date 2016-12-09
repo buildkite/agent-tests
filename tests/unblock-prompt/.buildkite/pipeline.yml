@@ -37,7 +37,7 @@ steps:
   - label: ":console:"
     command: ".buildkite/results.sh"
 
-  - block: "Continue without input"
+  - block: ":rocket: Release!"
 
   - label: ":console:"
     command: >
