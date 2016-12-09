@@ -2,6 +2,14 @@ steps:
   - block: "Release :bookmark_tabs:"
     prompt: "Fill out the details for this release"
     fields: 
+      - select: "Would you like a :taco: after this deploy?"
+        hint: "Less than 6 options will show a radio, more than 6 will show a select box"
+        key: "taco"
+        default: "Yes"
+        options:
+          - "Yes"
+          - "No"
+          - ":llama:"
       - text: "Release notes"
         key: "release-notes"
         hint: "Enter your release notes here :sparkles:"
