@@ -7,7 +7,7 @@ steps:
         hint: "Enter your release notes here :sparkles:"
       - text: "Release name"
         key: "release-name"
-        required: "false"
+        required: false
       - select: "Release type"
         key: "release-type"
         default: "Major"
