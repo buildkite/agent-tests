@@ -3,20 +3,20 @@ steps:
     prompt: Fill out the details for this release
     fields: 
       - text: Release notes
-        key: release-notes
+        key: "release-notes"
         hint: "Enter your release notes here :sparkles:"
       - text: Release name
-        key: release-name
-        required: false
+        key: "release-name"
+        required: "false"
       - select: Release type
-        key: release-type
+        key: "release-type"
         default: Major
         options:
           - Major
           - Minor
           - Patch
       - select: Team to notify after release
-        key: notify-team
+        key: "notify-team"
         options: 
           - Ops
           - Support
