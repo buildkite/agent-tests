@@ -1,21 +1,21 @@
 steps:
   - block: "Release :bookmark_tabs:"
-    prompt: Fill out the details for this release
+    prompt: "Fill out the details for this release"
     fields: 
-      - text: Release notes
+      - text: "Release notes"
         key: "release-notes"
         hint: "Enter your release notes here :sparkles:"
-      - text: Release name
+      - text: "Release name"
         key: "release-name"
         required: "false"
-      - select: Release type
+      - select: "Release type"
         key: "release-type"
-        default: Major
+        default: "Major"
         options:
           - Major
           - Minor
           - Patch
-      - select: Team to notify after release
+      - select: "Team to notify after release"
         key: "notify-team"
         options: 
           - Ops
