@@ -13,6 +13,7 @@ steps:
       - text: "Release notes"
         key: "release-notes"
         hint: "Enter your release notes here :sparkles:"
+        default: "What a great release, it's full of magic"
       - text: "Release name"
         key: "release-name"
         required: false
