@@ -1,39 +1,15 @@
 steps:
-  - block: "Release :bookmark_tabs:"
-    prompt: "Fill out the details for this release"
+  - block: "Choose commit :bookmark_tabs:"
+    prompt: "Select the commit you'd like to roll back to"
     fields: 
-      - select: "Would you like a :taco: after this deploy?"
-        hint: "Less than 6 options will show a radio, more than 6 will show a select box"
-        key: "taco"
-        default: "Yes"
-        options:
-          - "Yes"
-          - "No"
-          - ":llama:"
-      - text: "Release notes"
-        key: "release-notes"
-        hint: "Enter your release notes here :sparkles:"
-        default: "What a great release, it's full of magic"
-      - text: "Release name"
-        key: "release-name"
-        required: false
-      - select: "Release type"
-        key: "release-type"
-        default: "Major"
-        options:
-          - Major
-          - Minor
-          - Patch
-      - select: "Team to notify after release"
-        key: "notify-team"
+      - select: "Roll back to:"
+        key: "roll-back"
         options: 
-          - Ops: "thing"
-          - Support
-          - Engineering
-          - QA
-          - Sales
-          - Directors
-          - Everyone
+          - "32b23c2 Add guacamole to taco"
+          - "58e23d2 Mix guacamole"
+          - "80b3a5a Take cheese out of fridge"
+          - "c084606 Heat up taco shells"
+          - "9ae291f Mix taco sauce with beans"
 
   - label: ":console:"
     command: ".buildkite/results.sh"
