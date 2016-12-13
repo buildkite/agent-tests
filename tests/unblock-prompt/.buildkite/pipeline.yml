@@ -1,15 +1,9 @@
 steps:
-  - block: "Choose commit :bookmark_tabs:"
-    prompt: "Select the commit you'd like to roll back to"
+  - block: "Question!"
+    prompt: "Please answer this important question"
     fields: 
-      - select: "Roll back to:"
-        key: "roll-back"
-        options: 
-          - "32b23c2 Add guacamole to taco"
-          - "58e23d2 Mix guacamole"
-          - "80b3a5a Take cheese out of fridge"
-          - "c084606 Heat up taco shells"
-          - "9ae291f Mix taco sauce with beans"
+     - text: "What day is it today?"
+       key: "day-of-the-week"
 
   - label: ":console:"
     command: ".buildkite/results.sh"
