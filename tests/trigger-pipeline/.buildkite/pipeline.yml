@@ -15,7 +15,7 @@ steps:
 
   - wait
 
-  # Trigger a pipleine (with all the options)
+  # Trigger a pipeline (with all the options)
   - trigger: "running-commands"
     label: "Trigger :pipeline: Party!"
     build:
