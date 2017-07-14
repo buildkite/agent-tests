@@ -1,30 +1,27 @@
 steps:
-  - script:
-      label: ":console: Automatic retry"
-      command: "fail-then-succeed.sh"
-      artifact_paths: "*.sh"
-      retry:
-        # Disable manual retries for this job
-        manual: false
-        
-        # Setup some cases where a retry will happen automatically
-        automatic:
-          # Docker for normal tests
-          - exit_status: -1
-            maximum: 10
-            stop_agent: true # stop the agent when receving this exit status
-            
-          # Rando docker failures on special snowflakes
-          - exit_status: 3
-            maximum: 10
+  - label: ":console: Automatic retry"
+    command: "fail-then-succeed.sh"
+    artifact_paths: "*.sh"
+    retry:
+      # Disable manual retries for this job
+      manual: false
+      
+      # Setup some cases where a retry will happen automatically
+      automatic:
+        # Docker for normal tests
+        - exit_status: -1
+          maximum: 10
+          stop_agent: true # stop the agent when receving this exit status
+          
+        # Rando docker failures on special snowflakes
+        - exit_status: 3
+          maximum: 10
 
-  - script:
-      label: ":console: Manual retry"
-      command: "fail-then-succeed.sh"
-      artifact_paths: "*.sh"
+  - label: ":console: Manual retry"
+    command: "fail-then-succeed.sh"
+    artifact_paths: "*.sh"
 
   - wait
 
-  - script:
-      command: "echo hooray!"
-      name: ":tada:"
+  - command: "echo hooray!"
+    name: ":tada:"
