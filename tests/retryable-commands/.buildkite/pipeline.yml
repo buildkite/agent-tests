@@ -8,13 +8,8 @@ steps:
       
       # Setup some cases where a retry will happen automatically
       automatic:
-        # Docker for normal tests
-        - exit_status: -1
-          maximum: 10
-          
-        # Rando docker failures on special snowflakes
-        - exit_status: 3
-          maximum: 10
+        - exit_status: 123
+          maximum: 3
 
   - label: ":console: Manual retry"
     command: "fail-then-succeed.sh"
