@@ -1,6 +1,6 @@
 steps:
   - label: ":console: Automatic retry"
-    command: "fail-then-succeed.sh"
+    command: "exit 123"
     artifact_paths: "*.sh"
     retry:
       # Disable manual retries for this job
