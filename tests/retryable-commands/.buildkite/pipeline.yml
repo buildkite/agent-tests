@@ -1,5 +1,5 @@
 steps:
-  - label: ":console: Automatic retry"
+  - label: ":console: Automatic retry #1"
     command: "exit 123"
     artifact_paths: "*.sh"
     retry:
@@ -10,6 +10,15 @@ steps:
       automatic:
         - exit_status: 123
           maximum: 3
+          
+  - label: ":console: Automatic retry #2"
+    command: "exit -1"
+    artifact_paths: "*.sh"
+    retry:
+      - exit_statuses:
+          - -1
+          - -2
+          - -3
 
   - label: ":console: Manual retry"
     command: "fail-then-succeed.sh"
