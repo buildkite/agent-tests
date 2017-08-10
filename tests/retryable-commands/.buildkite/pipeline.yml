@@ -1,30 +1,40 @@
 steps:
-  - label: ":console: Automatic retry #1"
+  # Retry the job up to 2 times if it receives an exit status of 123
+  - label: ":console: (automatic retry 123 twice)"
     command: "exit 123"
     artifact_paths: "*.sh"
     retry:
-      # Disable manual retries for this job
-      manual: false
-      
-      # Setup some cases where a retry will happen automatically
       automatic:
         - exit_status: 123
-          maximum: 3
-          
-  - label: ":console: Automatic retry #2"
+          limit: 2
+  
+  # Retry statuses -1, -2 or -3 up to 10 times (10 is the default limit)
+  - label: ":console: (automatic retry -1, -2 or -3)"
     command: "exit -1"
-    artifact_paths: "*.sh"
     retry:
       - exit_statuses:
           - -1
           - -2
           - -3
-
-  - label: ":console: Manual retry"
-    command: "fail-then-succeed.sh"
-    artifact_paths: "*.sh"
-
-  - wait
-
-  - command: "echo hooray!"
-    name: ":tada:"
+   
+  # Manual retries are disabled (great for deploys or other non-retryable jobs)
+  - label: ":console: (manual retry disabled no reason)"
+    command: "exit -1"
+    retry:
+      manual:
+        allowed: false
+  
+  # Reasons can be provided if you disable manual retries
+  - label: ":console: (manual retry disabled with reason)"
+    command: "exit -1"
+    retry:
+      manual:
+        allowed: false
+        reason: "Because this is important ~ Keith"
+        
+  # You enable retries on jobs that have already passed
+  - label: ":console: (retry on passed builds)"
+    command: "echo hello"
+    retry:
+      manual:
+        permit_on_passed: true
