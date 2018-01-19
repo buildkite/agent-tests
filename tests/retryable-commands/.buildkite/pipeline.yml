@@ -17,6 +17,13 @@ steps:
   #         - -2
   #         - -3
    
+  # Manual retries are allowed as usual
+  - label: ":console: (manual retry allowed)"
+    command: "exit -1"
+    retry:
+      manual:
+        allowed: true
+
   # Manual retries are disabled (great for deploys or other non-retryable jobs)
   - label: ":console: (manual retry disabled no reason)"
     command: "exit -1"
