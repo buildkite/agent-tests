@@ -40,7 +40,7 @@ steps:
         reason: "Because this is important ~ Keith"
         
   # You enable retries on jobs that have already passed
-  - label: ":console: (retry on passed builds)"
+  - label: ":console: (retry on passed steps)"
     command: "echo hello"
     retry:
       manual:
