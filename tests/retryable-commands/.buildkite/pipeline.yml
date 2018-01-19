@@ -33,8 +33,8 @@ steps:
         reason: "Because this is important ~ Keith"
         
   # You enable retries on jobs that have already passed
-  - label: ":console: (retry on passed builds)"
-    command: "echo hello"
-    retry:
-      manual:
-        permit_on_passed: true
+  # - label: ":console: (retry on passed builds)"
+  #   command: "echo hello"
+  #   retry:
+  #     manual:
+  #       permit_on_passed: true
