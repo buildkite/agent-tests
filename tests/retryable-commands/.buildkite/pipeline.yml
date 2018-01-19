@@ -1,21 +1,21 @@
 steps:
   # Retry the job up to 2 times if it receives an exit status of 123
-  - label: ":console: (automatic retry 123 twice)"
-    command: "exit 123"
-    artifact_paths: "*.sh"
-    retry:
-      automatic:
-        - exit_status: 123
-          limit: 2
+  # - label: ":console: (automatic retry 123 twice)"
+  #   command: "exit 123"
+  #   artifact_paths: "*.sh"
+  #   retry:
+  #     automatic:
+  #       - exit_status: 123
+  #         limit: 2
   
   # Retry statuses -1, -2 or -3 up to 10 times (10 is the default limit)
-  - label: ":console: (automatic retry -1, -2 or -3)"
-    command: "exit -1"
-    retry:
-      - exit_statuses:
-          - -1
-          - -2
-          - -3
+  # - label: ":console: (automatic retry -1, -2 or -3)"
+  #   command: "exit -1"
+  #   retry:
+  #     - exit_statuses:
+  #         - -1
+  #         - -2
+  #         - -3
    
   # Manual retries are disabled (great for deploys or other non-retryable jobs)
   - label: ":console: (manual retry disabled no reason)"
