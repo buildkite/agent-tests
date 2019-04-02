@@ -4,7 +4,7 @@ RSpec.describe "Terminal inline images docs", type: :feature do
   before do
     Capybara.app_host = 'http://buildkite.github.io/'
 
-    visit "/terminal/inline-images/"
+    visit "/terminal-to-html/inline-images/"
   end
 
   it "includes an example print_image_ref bash function" do
